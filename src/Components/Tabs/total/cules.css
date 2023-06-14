@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+
+.spatiu{
+  padding: 20vh;
+}
+
+.center-table{
+    display: flex;
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 25%;
+    justify-content: center;
+    align-items: center;    
+    margin-top: 5%;
+}
+.center1{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+.center1>div{
+  width: 200px !important;
+  margin: 10px;
+}
+.center2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.center2>div{
+  width: 200px !important;
+  margin: 10px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+.submit_button{
+  margin-top: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #4caf75;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.table_row{
+
+  background-color: rgb(160, 151, 151);
+}

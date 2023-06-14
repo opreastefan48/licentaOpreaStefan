@@ -1,0 +1,18 @@
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+  margin-left: 10%;
+  width: 80%;
+  z-index: 1;
+}
+
+.text{
+  color: rgb(255, 255, 255);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+
+ p{
+   font-size:large
+ }
