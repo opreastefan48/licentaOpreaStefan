@@ -10,7 +10,7 @@ function Nav_bar() {
   function logout() {
     window.localStorage.setItem('isloggedin', 'false');
     window.location.href = '/licentaOpreaStefan/#/login';
-    window.location.reload();
+    window.location.reload(); 
   }
 
 

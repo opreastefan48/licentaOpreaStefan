@@ -94,7 +94,7 @@ function Login() {
       <div className="login-page">
         {localStorage.getItem('isloggedin') === 'true' ? (
           <div>
-            {navigate('/home')}
+            {navigate('/licentaOpreaStefan/#/home')}
           </div>
         ) : (
           renderForm

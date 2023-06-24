@@ -170,37 +170,36 @@ getTotal();
                 <TableBody>
 
                 {data.map((item, i) => (
-                    <tr key={i} >
-                      <td>{getTable(item).date}</td>
-                      <td align="center">{getTable(item).kilograme }</td>
-                      <td align="center">{getTable(item).plantatie}</td>
-                      <td align="center">{getTable(item).rand}</td>
-                      <td align="center"> {IfDelete(item)} 
+  <tr key={i}>
+    <td>{getTable(item).date}</td>
+    <td align="center">{getTable(item).kilograme}</td>
+    <td align="center">{getTable(item).plantatie}</td>
+    <td align="center">{getTable(item).rand}</td>
+    <td align="center">
+      {IfDelete(item)}
+      <Modal show={show} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirmare stergere</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Sunteti sigur ca doriti sa stergeti inregistrarea??</Modal.Body>
+        <Modal.Footer>
+          <Button_bootstrap variant="secondary" onClick={handleCloseModal}>
+            NU STERGE!!
+          </Button_bootstrap>
+          <Button_bootstrap variant="danger" onClick={() => DeleteUser(item._id)}>
+            DA, STERGE!!
+          </Button_bootstrap>
+        </Modal.Footer>
+      </Modal>
+      <Snackbar open={openSnackbarDelete} autoHideDuration={6000} onClose={handleCloseSnackbarDelete}>
+        <Alert onClose={handleCloseSnackbarDelete} severity="error" sx={{ width: '100%' }}>
+          Problema stearsa cu succes!
+        </Alert>
+      </Snackbar>
+    </td>
+  </tr>
+))}
 
-                        <Modal show={show} onHide={handleCloseModal }>
-                            <Modal.Header closeButton>
-                              <Modal.Title>Confirmare stergere</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>Sunteti sigur ca doriti sa stergeti inregistrarea??</Modal.Body>
-                            <Modal.Footer>
-                              <Button_bootstrap variant="secondary" onClick={handleCloseModal }>
-                                NU STERGE!!
-                              </Button_bootstrap>
-                              <Button_bootstrap variant="danger" onClick={() => DeleteUser(item._id) }>
-                                DA, STERGE!!
-                              </Button_bootstrap>
-                            </Modal.Footer>
-                          </Modal>
-                      <Snackbar open={openSnackbarDelete} autoHideDuration={6000} onClose={handleCloseSnackbarDelete}>
-                        <Alert onClose={handleCloseSnackbarDelete} severity="error" sx={{ width: '100%' }}>
-                          Problema stearsa cu succes!
-                        </Alert>
-                      </Snackbar>
-      </td>
-                        
-                    </tr>
-                    
-                ))}
                 
                 </TableBody>
 
