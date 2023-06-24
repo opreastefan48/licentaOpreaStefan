@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/licentaOpreaStefan/static/css/main.9461b6bb.css",
+    "main.js": "/licentaOpreaStefan/static/js/main.3d492686.js",
+    "static/media/fertilizare.png": "/licentaOpreaStefan/static/media/fertilizare.52b3574eb39b8813e482.png",
+    "static/media/problem.png": "/licentaOpreaStefan/static/media/problem.a61bc3333a412420f8e4.png",
+    "static/media/cules.png": "/licentaOpreaStefan/static/media/cules.b722d4e0a36829ae8ace.png",
+    "static/media/total.png": "/licentaOpreaStefan/static/media/total.e35d74868099b20e6b6c.png",
+    "index.html": "/licentaOpreaStefan/index.html",
+    "main.9461b6bb.css.map": "/licentaOpreaStefan/static/css/main.9461b6bb.css.map",
+    "main.3d492686.js.map": "/licentaOpreaStefan/static/js/main.3d492686.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9461b6bb.css",
+    "static/js/main.3d492686.js"
+  ]
+}

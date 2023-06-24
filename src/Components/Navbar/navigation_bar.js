@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Button from 'react-bootstrap/Button'
+import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 import "./navbar.css";
 
 function Nav_bar() {
@@ -25,16 +26,18 @@ function Nav_bar() {
     <header>
       <h3>Afine Oprea</h3>
       <nav ref={navRef}>
-        <a href="/home"> Home </a>
-        <a href="/probleme"> Probleme </a>
-        <a href="/cules"> Adauga Cantitate Culeasa </a>
-        <a href="/total"> Total cules </a>
-        <a href="/fertilizare"> Tabele Fertilizare </a>
+        <Link to="/home"> Home </Link>
+        <Link to="/probleme"> Probleme </Link>
+        <Link to="/cules"> Adauga Cantitate Culeasa </Link>
+        <Link to="/total"> Total cules </Link>
+        <Link to="/fertilizare"> Tabele Fertilizare </Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
-        {isLoggedIn && (
+        {isLoggedIn ? (
           <Button onClick={logout} variant="danger">LOGOUT</Button>
+        ) : (
+          <Button onClick={login} variant="primary">LOGIN</Button>
         )}
       </nav>
       <button className="nav-btn" onClick={showNavbar}>
