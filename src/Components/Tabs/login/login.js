@@ -91,7 +91,6 @@ function Login() {
       <div className="login-page">
         {localStorage.getItem('isloggedin') === 'true' ? (
           <div>
-            User is successfully logged in
             {navigate('/home')}
           </div>
         ) : (
