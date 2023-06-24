@@ -59,6 +59,10 @@ const handleChangeKG = (event) => {
 
 const submit = (event) => {
   event.preventDefault();
+  if(Kilograme <= 0){
+    alert('Cantitatea nu poate fi nula sau negativa!')
+    return
+  }
   const payload = {
     nume: nume,
     kilograme: Kilograme,
@@ -82,6 +86,7 @@ const submit = (event) => {
     console.log('error')
   });;
 }
+
 const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

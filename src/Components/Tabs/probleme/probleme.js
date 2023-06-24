@@ -87,6 +87,10 @@ export default function Probleme() {
     }
   
     console.log("Problem added");
+    if (Problem.planta <= 0) {
+      alert('Numarul plantei nu poate fi nul sau negativ!');
+      return;
+    }
     const newProblem = {
       problem: Problem.problem,
       plantatie: Problem.plantatie,
