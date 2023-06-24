@@ -54,12 +54,12 @@ function App() {
     <Router>
       <Nav_bar />
       <Routes>
-        <Route path="/licentaOpreaStefan/home" element={LoggedinHome()} />
-        <Route path="/licentaOpreaStefan/cules" element={LoggedinCules()} />
-        <Route path="/licentaOpreaStefan/total" element={LoggedinTotal()} />
-        <Route path="/licentaOpreaStefan/fertilizare" element={LoggedinFertilizare()} />
-        <Route path="/licentaOpreaStefan/probleme" element={LoggedinProbleme()} />
-        <Route path="/licentaOpreaStefan/login" element={LoggedinHome()} />
+        <Route path="/home" element={LoggedinHome()} />
+        <Route path="/cules" element={LoggedinCules()} />
+        <Route path="/total" element={LoggedinTotal()} />
+        <Route path="/fertilizare" element={LoggedinFertilizare()} />
+        <Route path="/probleme" element={LoggedinProbleme()} />
+        <Route path="/login" element={LoggedinHome()} />
       </Routes>
     </Router>
   );
