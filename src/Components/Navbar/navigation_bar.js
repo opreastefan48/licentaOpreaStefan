@@ -9,12 +9,10 @@ function Nav_bar() {
 
   function logout() {
     window.localStorage.setItem('isloggedin', 'false');
-    window.location.href = '/login';
+    window.location.href = '/licentaOpreaStefan/#/login';
+    window.location.reload();
   }
 
-  function login() {
-    window.location.href = '/login';
-  }
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -36,9 +34,7 @@ function Nav_bar() {
         </button>
         {isLoggedIn ? (
           <Button onClick={logout} variant="danger">LOGOUT</Button>
-        ) : (
-          <Button onClick={login} variant="primary">LOGIN</Button>
-        )}
+        ) : null}
       </nav>
       <button className="nav-btn" onClick={showNavbar}>
         <FaBars />

@@ -23,7 +23,10 @@ function Login() {
   const handleLogin = () => {
     localStorage.setItem('isloggedin', 'true');
     navigate('/home');
+    
     toast.success('Logged in successfully!');
+    window.location.reload();
+
   };
 
   const handleSubmit = (event) => {
