@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from 'react'
-import {BrowserRouter as Router,Route, Routes} from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
 import Nav_bar from './Components/Navbar/navigation_bar';
 import FormCules from './Components/Tabs/cules/form';
 import Fertilizare from './Components/Tabs/fertilizare/table'
@@ -51,26 +52,17 @@ function App() {
 
   return (
     <Router>
-        <Nav_bar />
+      <Nav_bar />
       <Routes>
-          <Route path='/' element={LoggedinHome()}/>
-
-          <Route path='/home' element={LoggedinHome()}/>
-
-          <Route path='/cules' element={LoggedinCules()}/>
-
-          <Route path='/total' element={LoggedinTotal()}/>
-
-          <Route path='/fertilizare' element={LoggedinFertilizare()}/>
-
-          <Route path='/probleme' element={LoggedinProbleme()}/>
-
-          <Route path='/login' element={LoggedinHome()}/>
-
+        <Route path="/licentaOpreaStefan/home" element={LoggedinHome()} />
+        <Route path="/licentaOpreaStefan/cules" element={LoggedinCules()} />
+        <Route path="/licentaOpreaStefan/total" element={LoggedinTotal()} />
+        <Route path="/licentaOpreaStefan/fertilizare" element={LoggedinFertilizare()} />
+        <Route path="/licentaOpreaStefan/probleme" element={LoggedinProbleme()} />
+        <Route path="/licentaOpreaStefan/login" element={LoggedinHome()} />
       </Routes>
     </Router>
-
-  )
+  );
 
 }
 

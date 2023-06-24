@@ -26,11 +26,11 @@ function Nav_bar() {
     <header>
       <h3>Afine Oprea</h3>
       <nav ref={navRef}>
-        <Link to="/home"> Home </Link>
-        <Link to="/probleme"> Probleme </Link>
-        <Link to="/cules"> Adauga Cantitate Culeasa </Link>
-        <Link to="/total"> Total cules </Link>
-        <Link to="/fertilizare"> Tabele Fertilizare </Link>
+        <Link to="licentaOpreaStefan/home"> Home </Link>
+        <Link to="licentaOpreaStefan/probleme"> Probleme </Link>
+        <Link to="licentaOpreaStefan/cules"> Adauga Cantitate Culeasa </Link>
+        <Link to="licentaOpreaStefan/total"> Total cules </Link>
+        <Link to="licentaOpreaStefan/fertilizare"> Tabele Fertilizare </Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
