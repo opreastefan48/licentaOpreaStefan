@@ -55,6 +55,7 @@ export default function Probleme() {
       planta:''
     }
   )
+
   useEffect(() => {
     getDataFromDb()
   }, [])
@@ -80,17 +81,17 @@ export default function Probleme() {
 
   function addProblem(e) {
     e.preventDefault();
-  
+
     if (!Problem.problem || !Problem.plantatie || !Problem.rand || !Problem.planta) {
-      alert("Please fill in all fields.");
+      handleOpenError("Este necesara completarea tuturor campurilor.");
       return;
     }
-  
-    console.log("Problem added");
-    if (Problem.planta <= 0) {
-      alert('Numarul plantei nu poate fi nul sau negativ!');
+
+    if (Problem.planta <= 0 || isNaN(Problem.planta)) {
+      handleOpenError("Numarul plantei trebuie sa fie un numar pozitiv.");
       return;
     }
+
     const newProblem = {
       problem: Problem.problem,
       plantatie: Problem.plantatie,
@@ -104,6 +105,17 @@ export default function Probleme() {
     setTimeout(refreshPage, 1000);
   }
   
+  const [errorOpen, setErrorOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleOpenError = (message) => {
+    setErrorMessage(message);
+    setErrorOpen(true);
+  };
+
+  const handleCloseError = () => {
+    setErrorOpen(false);
+  };
 
   function refreshPage() {
     window.location.reload(false);
@@ -279,7 +291,11 @@ export default function Probleme() {
           </tbody>
         </Table>
       </div>
-            
+      <Snackbar open={errorOpen} autoHideDuration={6000} onClose={handleCloseError}>
+      <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%' }}>
+        {errorMessage}
+      </Alert>
+    </Snackbar>
     </div>
   );
 }
