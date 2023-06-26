@@ -293,9 +293,8 @@ export default function Probleme() {
       </div>
       <Snackbar open={errorOpen} autoHideDuration={6000} onClose={handleCloseError} anchorOrigin={{
         vertical: 'top',
-        horizontal: 'center',
-      }}>
-      <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%' }}>
+        horizontal: 'center',}} style={{ marginTop: '50px' }}>
+      <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%'}}>
         {errorMessage}
       </Alert>
     </Snackbar>
