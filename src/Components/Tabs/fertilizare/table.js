@@ -74,24 +74,24 @@ export default function Fertilizare() {
           <th colSpan={3} className="text-center">August</th>
           </tr>
             <tr className=" p-3 mb-2 bg-secondary text-black">
-              <th>Sapt. 14</th>
-              <th>Sapt. 15</th>
-              <th>Sapt. 16</th>
-              <th>Sapt. 17</th>
-              <th>Sapt. 18</th>
-              <th>Sapt. 19</th>
-              <th>Sapt. 20</th>
-              <th>Sapt. 21</th>
-              <th>Sapt. 22</th>
-              <th>Sapt. 23</th>
-              <th>Sapt. 24</th>
-              <th>Sapt. 25</th>
-              <th>Sapt. 26</th>
-              <th>Sapt. 27</th>
-              <th>Sapt. 28</th>
-              <th>Sapt. 29</th>
-              <th>Sapt. 30</th>
-              <th>Sapt. 31</th>
+              <th>14</th>
+              <th>15</th>
+              <th>16</th>
+              <th>17</th>
+              <th>18</th>
+              <th>19</th>
+              <th>20</th>
+              <th>21</th>
+              <th>22</th>
+              <th>23</th>
+              <th>24</th>
+              <th>25</th>
+              <th>26</th>
+              <th>27</th>
+              <th>28</th>
+              <th>29</th>
+              <th>30</th>
+              <th>31</th>
 
 
             </tr>
@@ -354,27 +354,27 @@ export default function Fertilizare() {
 
           </tr >
             <tr className="p-3 mb-2 bg-secondary text-black">
-              <th>Sapt. 14</th>
-              <th>Sapt. 15</th>
-              <th>Sapt. 16</th>
-              <th>Sapt. 17</th>
-              <th>Sapt. 18</th>
-              <th>Sapt. 19</th>
-              <th>Sapt. 20</th>
-              <th>Sapt. 21</th>
-              <th>Sapt. 22</th>
-              <th>Sapt. 23</th>
-              <th>Sapt. 24</th>
-              <th>Sapt. 25</th>
-              <th>Sapt. 26</th>
-              <th>Sapt. 27</th>
-              <th>Sapt. 28</th>
-              <th>Sapt. 29</th>
-              <th>Sapt. 30</th>
-              <th>Sapt. 31</th>
-              <th>Sapt. 32</th>
-              <th>Sapt. 33</th>
-              <th>Sapt. 34</th>
+              <th>14</th>
+              <th>15</th>
+              <th>16</th>
+              <th>17</th>
+              <th>18</th>
+              <th>19</th>
+              <th>20</th>
+              <th>21</th>
+              <th>22</th>
+              <th>23</th>
+              <th>24</th>
+              <th>25</th>
+              <th>26</th>
+              <th>27</th>
+              <th>28</th>
+              <th>29</th>
+              <th>30</th>
+              <th>31</th>
+              <th>32</th>
+              <th>33</th>
+              <th>34</th>
             </tr>
           </thead>
 
