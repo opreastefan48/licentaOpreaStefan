@@ -50,7 +50,7 @@ export default function Home() {
           </Carousel.Item>
 
           <Carousel.Item>
-          <a href="/fertilizare">
+          <a href="/fertilizare"> 
             <img
               className="d-block w-100"
               src={ferti}
