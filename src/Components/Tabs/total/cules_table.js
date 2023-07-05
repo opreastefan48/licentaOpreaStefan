@@ -63,20 +63,23 @@ const getTable = (item) => {
   }
 };
 
-const [show, setShow] = useState(false);
+const [show, setShow] = useState(null);
 
   const handleCloseModal = () => setShow(false);
-  const handleShowModal = () => setShow(true);
-
-const IfDelete = (item) => {
-  if (item.nume === row.nume) 
-  {
-    return <button onClick={handleShowModal} type="button" className="btn btn-danger btn-sm ">Delete</button>;
-  }else{
-    return '';
-
+  function handleShowModal(index) {
+    setShow(index);
   }
-};
+  const IfDelete = (item,i) => {
+    if (item.nume === row.nume) {
+      return (
+        <button onClick={() => handleShowModal(i)} type="button" className="btn btn-danger btn-sm">
+          Delete
+        </button>
+      );
+    } else {
+      return null;
+    }
+  };
 
 
 const [openSnackbarDelete, setOpenSnackbarDelete] = React.useState(false);
@@ -170,36 +173,36 @@ getTotal();
                 <TableBody>
 
                 {data.map((item, i) => (
-  <tr key={i}>
-    <td>{getTable(item).date}</td>
-    <td align="center">{getTable(item).kilograme}</td>
-    <td align="center">{getTable(item).plantatie}</td>
-    <td align="center">{getTable(item).rand}</td>
-    <td align="center">
-      {IfDelete(item)}
-      <Modal show={show} onHide={handleCloseModal}>
-  <Modal.Header closeButton>
-    <Modal.Title>Confirmare stergere</Modal.Title>
-  </Modal.Header>
-  <Modal.Body>Sunteti sigur ca doriti sa stergeti inregistrarea??</Modal.Body>
-  <Modal.Footer>
-    <Button_bootstrap variant="secondary" onClick={handleCloseModal}>
-      NU STERGE!!
-    </Button_bootstrap>
-    <Button_bootstrap variant="danger" onClick={() => DeleteUser(item)}>
-      DA, STERGE!!
-    </Button_bootstrap>
-  </Modal.Footer>
-</Modal>
-      <Snackbar open={openSnackbarDelete} autoHideDuration={6000} onClose={handleCloseSnackbarDelete}>
-        <Alert onClose={handleCloseSnackbarDelete} severity="error" sx={{ width: '100%' }}>
-          Problema stearsa cu succes!
-        </Alert>
-      </Snackbar>
-    </td>
-  </tr>
-))}
-
+                    <tr key={i} >
+                      <td>{getTable(item).date}</td>
+                      <td align="center">{getTable(item).kilograme }</td>
+                      <td align="center">{getTable(item).plantatie}</td>
+                      <td align="center">{getTable(item).rand}</td>
+                      <td align="center"> {IfDelete(item,i)} 
+                      <Modal show={show === i} onHide={handleCloseModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Confirmare stergere</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Sunteti sigur ca doriti sa stergeti inregistrarea??</Modal.Body>
+          <Modal.Footer>
+            <Button_bootstrap variant="secondary" onClick={handleCloseModal}>
+              NU STERGE!!
+            </Button_bootstrap>
+            <Button_bootstrap variant="danger" onClick={() => DeleteUser(item._id)}>
+              DA, STERGE!!
+            </Button_bootstrap>
+          </Modal.Footer>
+        </Modal>
+                      <Snackbar open={openSnackbarDelete} autoHideDuration={6000} onClose={handleCloseSnackbarDelete}>
+                        <Alert onClose={handleCloseSnackbarDelete} severity="error" sx={{ width: '100%' }}>
+                          Problema stearsa cu succes!
+                        </Alert>
+                      </Snackbar>
+      </td>
+                        
+                    </tr>
+                    
+                ))}
                 
                 </TableBody>
 
